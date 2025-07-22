@@ -45,7 +45,7 @@ Create a job for example here i am going for an java maven app
 
 1. After creating a job go for > configuration in the side bar and then for > Build steps
      > configuration > Build Steps
-2. First Build step will be using maven and we have already have a pulgin for maven and the using dropdown click on invoke top-level maven target
+2. First Build step will be using maven and we already have a pulgin for maven and the using dropdown click on invoke top-level maven target
    - and for maven version give any of the versions you have
    - and for goal give the command **package** for **building and testing the application**
 3. Next use Execute shell from the dropdown for executing docker commands
