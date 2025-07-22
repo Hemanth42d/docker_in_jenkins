@@ -41,7 +41,7 @@ First if you are using jenkins via a docker iamge then we need not to be install
 
 Create a job for example here i am going for an java maven app
 
-[link for the demo java maven app](https://demoapp.com)
+[link for the demo java maven app](https://github.com/Hemanth42d/java-maven-app-learning-jenkins.git)
 
 1. After creating a job go for > configuration in the side bar and then for > Build steps
      > configuration > Build Steps
