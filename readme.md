@@ -17,8 +17,8 @@ First if you are using jenkins via a docker iamge then we need not to be install
     -v jenkins_home:/var/jenkins_home \
     -v /var/run/docker.sock:/var/run/docker/sock jenkins/jenkins:lts #docker.sock file is a unix socket file, used by docker deamon to communicate to docker client
 
-    #if you don't understand this you can go to my other repo [installing jenkins on server](https://github.com/Hemanth42d/install-jenkins-on-server)
     ```
+    if you don't understand this you can go to my other repo [installing jenkins on server](https://github.com/Hemanth42d/install-jenkins-on-server)
 
     - After completing the above steps check if docker is available inside the container or not before that we need to give premissions for the all the users to run the docker commands
     - ```bash
