@@ -81,7 +81,7 @@ Create a job for example here i am going for an java maven app
     - save and build it.
     - The best practice in docker while giving the password credential is by providing it in standard input format
       ```bash
-      docker echo $PASSWORD | docker login -u $USERNAME --password-stdin
+      echo $PASSWORD | docker login -u $USERNAME --password-stdin
       ```
 
   5. While learning it and if we are running it on the https then we need to allow docker to push to the insecure registries and do it in the deamon.json, By default the file won't be their.
