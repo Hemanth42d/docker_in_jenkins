@@ -84,7 +84,9 @@ Create a job for example here i am going for an java maven app
       echo $PASSWORD | docker login -u $USERNAME --password-stdin
       ```
 
-  5. While learning it and if we are running it on the https then we need to allow docker to push to the insecure registries and do it in the deamon.json, By default the file won't be their.
+### Push the Image to nexus repository
+
+  5. While learning it and if we are running it on the http then we need to allow docker to push to the insecure registries and do it in the deamon.json, By default the file won't be their.
      ```bash
      vim /etc/docker/deamon.json (in the server terminal not in the docker container if your are running jenkins as a container)
 
