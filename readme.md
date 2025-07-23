@@ -100,7 +100,7 @@ Create a job for example here i am going for an java maven app
 7. Instead of docker hub credentials choose nexus credentials.
 8. Push the image
    ```bash
-    docker build -t <ip_address>:<port_number>/java-maven-app:1.0 . (build image with the repo name so we don't need to explicitly mention again while pushing)
+    docker build -t <ip_address>:<port_number>/java-maven-app:1.0 . #(build image with the repo name so we don't need to explicitly mention again while pushing)
     # we can get the credentials via a plugin in our jenkins named use secret files Or text (in the Build Environment) > click on add > we get a dropdown > click on > username and password > give variable names as USERNAME and PASSWORD and choose the credentials
     # docker hub will be the default for login and if you have your nexus or aws ecr repo's you need to specify it here.
     docker login -u $USERNAME -p $PASSWORD ip_address>:<port_number>
