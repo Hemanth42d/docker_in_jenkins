@@ -16,6 +16,13 @@ First if you are using jenkins via a docker iamge then we need not to be install
     docker run -p 8080:8080 -p 50000:50000 -d \
     -v jenkins_home:/var/jenkins_home \
     -v /var/run/docker.sock:/var/run/docker/sock jenkins/jenkins:lts #docker.sock file is a unix socket file, used by docker deamon to communicate to docker client
+    # or
+
+    docker run -d  -p 8080:8080 -p 50000:50000  \
+     -v /mnt/ssd/jenkins_home:/var/jenkins_home \
+    -v /var/run/docker.sock:/var/run/docker.sock  \
+    -e JAVA_OPTS="-Xms2048m -Xmx8192m -XX:+UseG1GC -XX:+PrintGCDetails -Xloggc:/var/jenkins_home/gc.log" \ # for assinging more java-heap memory and to debug the logs of jnekins
+      jenkins/jenkins:lts
 
     ```
     if you don't understand this you can go to my other repo [installing jenkins on server](https://github.com/Hemanth42d/install-jenkins-on-server)
