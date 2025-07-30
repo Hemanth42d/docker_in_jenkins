@@ -32,7 +32,7 @@ First if you are using jenkins via a docker iamge then we need not to be install
       # by default if we enter into the container we will be in the jenkins user but this time we need to login as root user so run the below command
       docker exec -u 0 -it <container_id> /bash/sh
 
-      # to fix everything and ensure smooth running of docker inside container we need to run the below command
+      # to fix everything and ensure smooth running of docker inside container we no need to run the below command
       curl https://get.docker.com/ > dockerinstall && chmod 777 dockerinstall && ./dockerinstall
       
       ls -l /var/run/docker.sock
