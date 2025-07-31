@@ -33,6 +33,8 @@ First if you are using jenkins via a docker iamge then we need not to be install
       docker exec -u 0 -it <container_id> /bash/sh
 
       # to fix everything and ensure smooth running of docker inside container we no need to run the below command
+      # if you don't want to install docker cli again inside the container you can mount the folder in your container which contains docker cli to the container
+      # And the command is you need to do it while running the container " -v /usr/bin/docker:/usr/bin/docker "
       curl https://get.docker.com/ > dockerinstall && chmod 777 dockerinstall && ./dockerinstall
       
       ls -l /var/run/docker.sock
