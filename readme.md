@@ -18,9 +18,13 @@ First if you are using jenkins via a docker iamge then we need not to be install
     -v /var/run/docker.sock:/var/run/docker/sock jenkins/jenkins:lts #docker.sock file is a unix socket file, used by docker deamon to communicate to docker client
     # or
 
+    # make sure you run the command
+    sudo chown -R 1000:1000 /mnt/ssd/jenkins_home  #if you created a server and used ssd disk since you are mounting the volume to it so it might gives you permission denied message.
+    
     docker run -d  -p 8080:8080 -p 50000:50000  \
      -v /mnt/ssd/jenkins_home:/var/jenkins_home \
     -v /var/run/docker.sock:/var/run/docker.sock  \
+    -v /usr/bin/docker:/ur/bin/docker \  # mount this vome and the above line if you don't want to install docker again in the conatiner since we already have docker in server we can just mount it
     -e JAVA_OPTS="-Xms2048m -Xmx8192m -XX:+UseG1GC -XX:+PrintGCDetails -Xloggc:/var/jenkins_home/gc.log" \ # for assinging more java-heap memory and to debug the logs of jnekins
       jenkins/jenkins:lts
 
